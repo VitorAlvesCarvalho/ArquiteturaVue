@@ -16,7 +16,7 @@ export class BaseApiConfig {
   }
 
   public get<T>(url: string, options?: AxiosRequestConfig): Promise<T> {
-    return this.http.get<T>(url, options).then(({ data }) => data);
+    return this.http.get(url, options);
   }
 
   public post<T>(
@@ -24,7 +24,7 @@ export class BaseApiConfig {
     data?: any,
     options?: AxiosRequestConfig
   ): Promise<T> {
-    return this.http.post(url, data, options).then(({ data }) => data);
+    return this.http.post(url, data, options);
   }
 
   public put<T>(
@@ -32,10 +32,10 @@ export class BaseApiConfig {
     data?: any,
     options?: AxiosRequestConfig
   ): Promise<T> {
-    return this.http.put(url, data, options).then(({ data }) => data);
+    return this.http.put(url, data, options);
   }
 
   public delete<T>(url: string, options?: AxiosRequestConfig): Promise<T> {
-    return this.http.delete(url, options).then(({ data }) => data);
+    return this.http.delete(url, options);
   }
 }
