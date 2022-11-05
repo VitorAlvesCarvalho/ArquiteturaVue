@@ -17,8 +17,15 @@ export default class Authentication extends Vue {
   @AuthenticationModule.Getter("textAuthentication")
   readonly textAuthentication!: string;
 
+  @AuthenticationModule.Action("getPokemon")
+  public getPokemon!: Function;
+
   @CommonModule.Getter("textCommon")
   readonly textCommon!: string;
+
+  async created() {
+    await this.getPokemon("ditto");
+  }
 }
 </script>
 
