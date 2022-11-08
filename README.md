@@ -1,4 +1,4 @@
-# Proposta de arquitetura para projeto Vue.js
+# Proposta de arquitetura para projeto Vue.js 
 
 ## Arquitetura
 Foi utilizado a arquitetura de módulo, nesse projeto foi criado os módulos home, common e authentication. Cada modulo contém suas pastas e arquivos especificos de forma isolada, no módulo contém pastas de mocks, components, helpes, routes, service, store, types, views e qual mais for necessária.
